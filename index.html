@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Name Generator</title>
+    <style>
+        body{
+            
+          display: flex;
+          background-color: beige;
+          justify-content: center;
+          align-items: center;
+           height: 100vh;
+        }
+        .container{
+
+            border: 5px solid grey;
+            background-color:  black;
+            width: 600px;
+            max-width: 600px;
+            height: 650px;
+            border-radius: 10px;
+            padding: 10px;
+           justify-content: center;
+           color: beige;
+      
+        }
+        .input-block{
+
+            /* border: 1px solid red; */
+            height: 10%;
+            font-size: 20px;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+            
+        }
+        .input-block label{
+            display: inline-block;
+            width: 200px;
+            
+        }
+        .input-block input{
+             
+               font-size: 16px;
+              padding-left: 5px;
+        }
+        .input-block select{
+             
+               text-align: left;
+        }
+        .input-block input,select{
+            width: 250px;
+            height: 30px;
+            border-radius: 3px;
+            outline:none;
+            border: 1px solid gray;
+         
+        }
+        .input-block input,label,select{
+            margin: 5px;
+        }
+        #heading{
+
+            width: 100%;
+            /* border: 1px solid green; */
+            color: coral;
+            letter-spacing: 1.5px;
+            text-align: center;
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+       #generated-name-block{
+
+            text-align: center;
+            margin-top: 20px;
+       }
+       .submit-button{
+
+          display: flex;
+           width: 100%;
+           height: 10%;
+           justify-content: center;
+           align-content: center;
+           margin-top: 10px;
+       }
+       .submit-button button{
+          
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+               background-color: green;
+                color: white;
+            border: 1px solid lightgreen;
+            height: 50px;
+            font-size: 1.2em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        
+       }
+       .submit-button button:hover{
+             
+                cursor: pointer ;
+                 background-color: rgba(6, 182, 6, 0.852);
+            
+             
+       }
+      input::placeholder{
+
+           color: rgba(154, 142, 142, 0.937);
+      }
+      /* #document-type{
+          color: rgba(154, 142, 142, 0.937);;
+      }
+      #document-type>option:not(:first-child){
+
+           color: #000;
+      } */
+     /* #document-type>option:first-hand{
+        color: #ccc;
+     } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading" id="heading">
+            Generate File Name
+        </div>
+        <div class="inputs">
+            <div class="input-block">
+            <label for="project-code">Project Ref. No:
+            </label> <input type="text" id="project-code" placeholder="Enter project ref. no.">
+        </div>
+       <div class="input-block">
+        <label for="document-type">Document Type:
+          </label>
+             <select name="" id="document-type">
+                <option style="text-align: center;" value="" id="option-1">Select document type</option>
+                <option value="Budgetting Offer">Budgetting Offer</option>
+                <option value="Technical Description">Technical Description</option>
+                <option value="Technical_Commercial Info">Technical + Commercial Info</option>
+                <option value="Binding Quotation">Binding Quotation</option>
+                <option value="Meeting Notes/Reports">Meeting Notes / Reports</option>
+                <option value="Visit Notes / Reports">Visit Notes / Reports</option>
+                <option value="Research Paper">Research Paper</option>
+                <option value="SOP">SOP</option>
+                <option value="Manual">Manual</option>
+                <option value="Reference Document">Reference Document</option>
+            </select>
+ 
+        
+       </div>
+       <div class="input-block">
+        <label for="generic-file-name">Generic File Name:   </label>
+            <input type="text" id="generic-file-name" placeholder="Enter generic file name">
+    
+    </div>
+       <div class="input-block">
+        <label for="serial-no">Serial No. : </label>
+            <input type="text" id="serial-no" placeholder="Enter serial no.">
+      </div>
+       <div class="input-block">
+        <label for="version">Version :   </label>
+            <input type="text" id="version" placeholder="Enter version no.">
+     
+       </div>
+       <div class="input-block">
+        <label for="filename">Date :  </label>
+            <input type="datetime-local" id="date">
+      
+       </div>
+       <div class="input-block" id="generated-name-block">
+      <p id="generated-filename"> Generated Name Of File :</p>
+       </div>
+        </div>
+       <div class="submit-button">
+        <button type="submit">Submit</button>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
